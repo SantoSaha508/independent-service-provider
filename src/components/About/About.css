@@ -1,0 +1,9 @@
+.secondDiv{
+    background-color: gainsboro;
+}
+
+.secondDiv img {
+    width: 400px;
+    border-radius: 200px;
+    margin: 20px;
+}
