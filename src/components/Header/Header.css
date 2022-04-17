@@ -1,0 +1,22 @@
+.photography{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0 20px;
+}
+.photography h3{
+    color: orange;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.photography a{
+    color: beige;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 700;
+}
+.photography a:hover{
+    color: orange;
+}
