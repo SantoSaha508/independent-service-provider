@@ -1,11 +1,11 @@
 import './App.css';
-import About from './components/About/About';
+import Notfound from './components/Notfound/Notfound';
 
 function App() {
   return (
     <div className="App">
       
-      <About></About>
+      <Notfound></Notfound>
     </div>
   );
 }

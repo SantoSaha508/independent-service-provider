@@ -1,0 +1,20 @@
+.notfound{
+    background-color: lightgray;
+    height: 900px;
+}
+
+.notfound h1 {
+    font-size: 150px;
+    margin-top: 0;   
+}
+
+.btn {
+    border: none;
+    padding: 15px;
+    width: 300px;
+    background-color: gray;
+    color: white;
+    font-size: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}

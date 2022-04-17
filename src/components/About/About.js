@@ -14,6 +14,7 @@ const About = () => {
                     
                 </p>
             </div>
+            <hr />
         </div>
     );
 };
