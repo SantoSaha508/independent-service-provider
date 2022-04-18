@@ -2,7 +2,7 @@
 import { sendPasswordResetEmail } from 'firebase/auth';
 import React, { useRef } from 'react';
 import { Button, ButtonGroup, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGithub } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css'
@@ -15,6 +15,8 @@ const Login = () => {
 
     let from = location.state?.from?.pathname || "/";
 
+    const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
+
     const [
         signInWithEmailAndPassword,
         user,
@@ -22,7 +24,7 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
 
-      if(user){
+      if(user || user1){
         navigate(from, { replace: true });
       }
 
@@ -41,7 +43,7 @@ const Login = () => {
     const handlePasswordReset = () => {
         sendPasswordResetEmail(auth, emailRef.current.value)
         .then( () => {
-            
+
         })
     }
 
@@ -64,10 +66,16 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
+                <p style={{ color: 'red' }}>{error?.message}</p>
+                {
+                    loading && <p>Loading...</p>
+                }
                 <Button variant="primary" type="submit">
                     Submit
                 </Button> <br /><br />
                 <button onClick={handlePasswordReset}>Reset Password</button>
+                <br /><br />
+                <button onClick={() => signInWithGithub()}>GitHub</button>
             </Form>
             <p>New to Photography world ? <span className='text-danger register' onClick={navigateRegister}>Create an Account</span></p>
         </div>

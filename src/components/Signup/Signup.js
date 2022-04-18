@@ -11,8 +11,8 @@ const Signup = () => {
         createUserWithEmailAndPassword,
         user,
         loading,
-        error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+        error
+    ] = useCreateUserWithEmailAndPassword(auth);
 
     const navigate = useNavigate();
     const navigateLogin = () => {
@@ -21,29 +21,29 @@ const Signup = () => {
 
     const varification = () => {
         sendEmailVerification(auth.currentUser)
-        .then(() => {
+            .then(() => {
 
-        })
+            })
     }
 
 
-    if(user){
+    if (user) {
         varification();
         navigate('/login');
     }
-    
-    
 
-const handleRegister = event => {
-    event.preventDefault();
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    const confirmPassword = event.target.confitmPassword.value;
-    console.log(name, email, password, confirmPassword);
 
-    createUserWithEmailAndPassword(email, password);
-}
+
+    const handleRegister = event => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        const confirmPassword = event.target.confitmPassword.value;
+        console.log(name, email, password, confirmPassword);
+
+        createUserWithEmailAndPassword(email, password);
+    }
 
     return (
         <div className='register-form'>
@@ -54,7 +54,6 @@ const handleRegister = event => {
                 <input type="email" name="email" id="" placeholder='Your email' required /><br />
                 <input type="password" name="password" id="" placeholder='Password' required /><br />
                 <input type="password" name="confitmPassword" id="" placeholder='confirm Password' required /><br />
-                <p style={{color: 'black'}}>{error}</p>
                 <input type="submit" value="Register" />
             </form>
             <p>Allready have an account ? <span className='text-danger register' onClick={navigateLogin}>Please Login</span></p>
