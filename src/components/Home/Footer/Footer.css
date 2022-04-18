@@ -1,0 +1,17 @@
+.footer{
+    
+}
+
+.footersection{
+    background-color: black;
+    height: 300px;
+    color: white;
+    padding-top: 20px;
+    margin-top: 40px;
+    color: orange; 
+}
+
+.picture img{
+    width: 100%;
+    height: 600px;
+}

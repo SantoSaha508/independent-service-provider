@@ -9,7 +9,9 @@ const Header = () => {
             <h3>Photography world</h3>
             </div>
             <div>
-            <Link to='/home'>Home</Link>
+            <Link to='/home'>Home
+                <Link to="/banner"></Link>
+            </Link>
             <Link to="/blogs">Blogs</Link>
             <Link to="/about">About</Link>
             <Link to="/login">Login</Link>

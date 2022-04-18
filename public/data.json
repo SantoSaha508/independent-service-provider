@@ -1,0 +1,24 @@
+[
+    {
+      "name": " Wedding Photography",
+      "id": "1",
+      "img":"https://static.onecms.io/wp-content/uploads/sites/34/2018/03/16/rebecca-clay-wedding-north-carolina-ceremony-103228806-2000.jpg",
+      "price": 200,
+      "description":"We are expert in wedding photography. Frame your wedding by us."
+    },
+    {
+      "name": "BirthDay Photography",
+      "id": "2",
+      "img":"https://bambiniphoto.sg/wp-content/uploads/Kids-party-children-party-event-photography-singapore-014.jpg",
+      "price":150,
+      "description":"We are providing Birthday  photography. Frame your happy moments with us."
+    },
+    {
+      "name": "Fashion Photography",
+      "id": "3",
+      "img":"https://jonathantaylorphotography.com/wp-content/uploads/2019/01/photography-studio-rental-bangkok.jpg",
+      "price":250,
+      "description":"We are expert in fashon  photography. Our team members are heighly profession."
+    }
+    
+  ]
