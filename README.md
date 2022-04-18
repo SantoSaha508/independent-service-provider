@@ -1,6 +1,17 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live site Link [Photography world](https://github.com/facebook/create-react-app).
+
+## Project deatil
+## `1.One home page. with header, services and  footer`
+## `2.Responsive loginpage`
+## `3.Responsive registration page`
+## `4.One private check out page`
+## `5.Handle authentication`
+
+## Techonology tools
+## `1. user react router hooks, 2. use firebase, 3. use react bootstrap`
+
 
 ## Available Scripts
 

@@ -7,7 +7,10 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <div className='services-container'>
             <Services></Services>
+            </div>
+            
         </div>
     );
 };

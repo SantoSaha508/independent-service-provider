@@ -6,8 +6,7 @@ const CheckOut = () => {
     const {checkoutId} = useParams();
     return (
         <div>
-            <h1>this is check out page:{checkoutId}</h1>
-
+            <h1>check out page:{checkoutId}</h1>
         </div>
     );
 };

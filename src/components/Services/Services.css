@@ -1,0 +1,11 @@
+.servidesHeader{
+    background-color: gray;
+    margin: 20px 0px;
+    padding: 15px;
+}
+
+.serviceCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
