@@ -7,7 +7,7 @@ import './Login.css'
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
-    const navigate = useNavigate();
+    const navigate = useNavigate(); 
 
     const handleSubmit = event => {
         event.preventDefault();
