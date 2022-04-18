@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Signup.css';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { sendEmailVerification } from 'firebase/auth';
 
 
 const Signup = () => {
@@ -18,9 +19,19 @@ const Signup = () => {
         navigate('/login');
     }
 
-    if(user){
-        navigate('/home');
+    const varification = () => {
+        sendEmailVerification(auth.currentUser)
+        .then(() => {
+
+        })
     }
+
+
+    if(user){
+        varification();
+        navigate('/login');
+    }
+    
     
 
 const handleRegister = event => {

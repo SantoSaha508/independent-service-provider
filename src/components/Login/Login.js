@@ -1,8 +1,9 @@
 
+import { sendPasswordResetEmail } from 'firebase/auth';
 import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, ButtonGroup, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css'
 
@@ -37,6 +38,13 @@ const Login = () => {
         navigate('/signup');
     }
 
+    const handlePasswordReset = () => {
+        sendPasswordResetEmail(auth, emailRef.current.value)
+        .then( () => {
+            
+        })
+    }
+
     return (
         <div className='container w-50 mx-auto '>
             <h2 className='text-primary text-center mt-2'>Login</h2>
@@ -58,7 +66,8 @@ const Login = () => {
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Submit
-                </Button>
+                </Button> <br /><br />
+                <button onClick={handlePasswordReset}>Reset Password</button>
             </Form>
             <p>New to Photography world ? <span className='text-danger register' onClick={navigateRegister}>Create an Account</span></p>
         </div>
