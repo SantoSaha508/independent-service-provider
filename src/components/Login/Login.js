@@ -1,23 +1,50 @@
-import React from 'react';
+
+import React, { useRef } from 'react';
+import { Button, Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Login.css'
 
 const Login = () => {
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const navigate = useNavigate();
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+
+        console.log(email, password);
+    }
+
+    const navigateRegister = (event) => {
+        navigate('/signup');
+    }
+
     return (
-        <div className='loginBox'>
-            <div >
-                <h2>login</h2>
-                <form>
-                    <div className="input-group">
-                        <label htmlFor="email">Email </label> <br />
-                        <input type="email" name="email" required />
-                    </div>
-                    <div className="input-group">
-                        <label htmlFor='password'>Password </label><br />
-                        <input type="password" name="password" required />
-                    </div>
-                    <input className='form-submit' type="submit" value="Login" />
-                </form>
-            </div>
+        <div className='container w-50 mx-auto '>
+            <h2 className='text-primary text-center mt-2'>Login</h2>
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required/>
+                    <Form.Text className="text-muted">
+                        We'll never share your email with anyone else.
+                    </Form.Text>
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required/>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="Check me out" />
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    Submit
+                </Button>
+            </Form>
+            <p>New to Photography world ? <span className='text-danger register' onClick={navigateRegister}>Create an Account</span></p>
         </div>
     );
 };
