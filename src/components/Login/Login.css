@@ -1,3 +1,14 @@
 .register {
     cursor: pointer;
 }
+
+.loginform{
+    background-color: gainsboro;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.inputField{
+    padding: 15px;
+
+}

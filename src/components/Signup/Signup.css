@@ -1,7 +1,7 @@
 .register-form{
     margin: 0 auto;
     width: 50%;
-    background-color: gray;
+    background-color: gainsboro;
     padding: 20px;
     margin-top: 20px;
 }
@@ -15,4 +15,15 @@
 .register-form h2{
     font-size: 50px;
     color: orange;
+}
+
+.signupBtn{
+    border-radius: 20px;
+    width: 200px;
+    background-color: gray;
+    color: white;
+    font-weight: 600;
+}
+.signupBtn:hover{
+    background-color: orange;
 }

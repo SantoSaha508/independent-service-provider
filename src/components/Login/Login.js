@@ -50,10 +50,10 @@ const Login = () => {
     return (
         <div className='container w-50 mx-auto '>
             <h2 className='text-primary text-center mt-2'>Login</h2>
-            <Form onSubmit={handleSubmit}>
+            <Form className='loginform' onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required/>
+                    <Form.Control className='inputField' ref={emailRef} type="email" placeholder="Enter email" required/>
                     <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
                     </Form.Text>
@@ -61,7 +61,7 @@ const Login = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required/>
+                    <Form.Control className='inputField' ref={passwordRef} type="password" placeholder="Password" required/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
@@ -72,10 +72,10 @@ const Login = () => {
                 }
                 <Button variant="primary" type="submit">
                     Submit
-                </Button> <br /><br />
-                <button onClick={handlePasswordReset}>Reset Password</button>
+                </Button> <br /><br /> <hr /><hr />
+                <button className='btn' onClick={handlePasswordReset}>Reset Password</button>
                 <br /><br />
-                <button onClick={() => signInWithGithub()}>GitHub</button>
+                <button className='btn' onClick={() => signInWithGithub()}>GitHub</button>
             </Form>
             <p>New to Photography world ? <span className='text-danger register' onClick={navigateRegister}>Create an Account</span></p>
         </div>

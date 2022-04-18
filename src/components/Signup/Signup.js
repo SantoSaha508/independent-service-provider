@@ -54,7 +54,7 @@ const Signup = () => {
                 <input type="email" name="email" id="" placeholder='Your email' required /><br />
                 <input type="password" name="password" id="" placeholder='Password' required /><br />
                 <input type="password" name="confitmPassword" id="" placeholder='confirm Password' required /><br />
-                <input type="submit" value="Register" />
+                <input className='signupBtn' type="submit" value="Register" />
             </form>
             <p>Allready have an account ? <span className='text-danger register' onClick={navigateLogin}>Please Login</span></p>
         </div>

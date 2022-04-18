@@ -9,8 +9,9 @@ const About = () => {
             </div>
             <div>
                 <h2>Name: Santo Saha</h2>
+                <h4>Education: B.Sc in CSE</h4>
                 <p>
-                    My aim is to be a good web developer. <br /> To achive this I am tring heardwork. I want to see myself as software Engineer in a IT company. <br />
+                    My aim is to be a good web developer. <br /> To achive this I am tring heardwork. I want to see myself as software Engineer in an IT company. <br />
                     
                 </p>
             </div>
